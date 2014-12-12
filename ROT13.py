@@ -97,6 +97,8 @@ def cripto(frase):
 def ajuda():
 
 	print("um dia escreveremos essa parte do código, abraço")
+	
+	input("\n\nPressione Enter para continuar")
 
 def sobre():
 	print ("Sobre:\n\
