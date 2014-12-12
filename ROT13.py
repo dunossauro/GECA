@@ -155,7 +155,7 @@ def menu():
 	elif menu == "5":
 		exit()
 
-#Úm laço para manter o menu contante
+#Úm laço para manter o menu constante
 def main():
 	while True:
 		menu()
