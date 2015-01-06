@@ -109,6 +109,7 @@ def sobre():
 		\n\
 		0.1 (09/12/2014)\n\
 		0.2 (12/12/2014)\n\
+		0.3 (06/01/2015)\n\
 		\n\
 	Desevolvedores:\n\
 		0.1\n\
@@ -117,6 +118,8 @@ def sobre():
 		0.2\n\
 			Eduardo F. Mendes (z4r4tustr4)\n\
 			Jacomo Giovanetti\n\
+		0.3\n\
+			Eduardo F. Mendes (z4r4tu5tr4)\n\
 		\n\
 	Debug:\n\
 		0.1\n\
@@ -140,11 +143,13 @@ def menu():
 
 	if menu == "1":
 		entradaLimpa = input("Digite a frase a ser criptografada: \b")
+		entradaLimpa = entradaLimpa.replace(" ","")		
 		entradaLimpa = entradaLimpa.upper()
 		frase = list(entradaLimpa)
 		cripto(frase)
 	elif menu == "2":
 		entradaSuja = input("Digite a frase a ser descriptografada: \b")
+		entradaSuja = entradaSuja.replace(" ","")
 		entradaSuja = entradaSuja.upper()
 		frase = list(entradaSuja)
 		cripto(frase)
