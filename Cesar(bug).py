@@ -17,7 +17,7 @@ def cripto(entrada,b):
 
 	#Saida
 
-	print("\n\n Frase: " + entrada)
+#	print("\n\n Frase: " + entrada)
 
 	input("\n\nPressione Enter para continuar")
 
