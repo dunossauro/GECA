@@ -42,7 +42,7 @@ Cifra de Cesar\n\
 
 """
 A função replace remove os espaços em branco, para a analise de frequencia se tornar um pouco mais "complicada"
-A função Upper está lá pos antigamente eram usados os caracteres maiusculos no texto criptografado
+A função Upper está lá porque antigamente eram usados os caracteres maiusculos no texto criptografado
 A variável b representa um chaveador, quando ativo a def cripto() faz descriptografia
 quando inativo criptografia
 """
