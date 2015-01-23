@@ -6,6 +6,12 @@ import os, signal
 
 #Função que executa a Cifra de cesar
 def cripto(entrada,b):
+"""
+Essa parte do código foi baseada nesse link: http://pastebin.com/W6WGW3JE
+
+E apesar de não resolver o problema do corpo finito e sim andar pela tabela ASCII já possível se fazer algo.
+"""
+
 	a=str()
 	for x in entrada:
 		if b == "0":
@@ -33,8 +39,15 @@ Cifra de Cesar\n\
 2. Descriptografar\n\
 	")
 
-	menu = input(":")
 
+"""
+A função replace remove os espaços em branco, para a analise de frequencia se tornar um pouco mais "complicada"
+A função Upper está lá pos antigamente eram usados os caracteres maiusculos no texto criptografado
+A variável b representa um chaveador, quando ativo a def cripto() faz descriptografia
+quando inativo criptografia
+"""
+
+	menu = input(":")
 	if menu == "1":
 		entrada = input("Digite a frase a ser criptografada: \b")
 		entrada = entrada.replace(" ","")		
