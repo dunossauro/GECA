@@ -6,18 +6,18 @@ import os, signal
 
 #Função que executa a Cifra de cesar
 def cripto(entrada,b):
-
+	a=str()
 	for x in entrada:
 		if b == "0":
- 			print(chr(ord(x)+3))
+ 			a +=(chr(ord(x)+3))
 		if b == "1":
-			print(chr(ord(x)-3))
+			a +=(chr(ord(x)-3))
 	
 	
 
 	#Saida
 
-#	print("\n\n Frase: " + entrada)
+	print("\n\n Frase: " + a)
 
 	input("\n\nPressione Enter para continuar")
 
@@ -26,9 +26,11 @@ def menu():
 	#Menu inicial
 	os.system('clear')
 
-	print("	=== Menu ===\n\
-	1. Criptografar\n\
-	2. Descriptografar\n\
+	print("\
+Cifra de Cesar\n\
+=== Menu ===\n\
+1. Criptografar\n\
+2. Descriptografar\n\
 	")
 
 	menu = input(":")
