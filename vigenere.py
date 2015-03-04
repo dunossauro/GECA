@@ -7,6 +7,7 @@ mensagem = input("Digite a mensagem:  ").upper().replace(" ","")
 chave = input("Digite a chave:  ").upper().replace(" ","")
 posicao = 0
 resultado = ""
+chaveador = "x"
 
 """
 
@@ -20,7 +21,13 @@ for letra_m in mensagem:
 
 	mod_c = posicao % len(chave)
 	letra_c = chave[mod_c]
-	mod_a = (alfabeto.find(letra_m) + alfabeto.find(letra_c)) % 26
+
+	if chaveador is "0":
+
+		mod_a = (alfabeto.find(letra_m) + alfabeto.find(letra_c)) % 26
+	else:
+		mod_a = (alfabeto.find(letra_m) - alfabeto.find(letra_c)) % 26
+	
 	resultado += alfabeto[mod_a]
 	posicao += 1
 
