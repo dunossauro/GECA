@@ -11,12 +11,3 @@ Todo código, ou algo que o valha, é livre para ser usado por todos para todo e
 
 
 ============================================================
-
-Datacode
-
-
-Dez - 14
-
-  Códigos dos Desafios usando cifras antigas.
-  
-===========================================================
