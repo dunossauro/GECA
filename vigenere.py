@@ -1,34 +1,35 @@
-#!/usr/bin/python 3
- 
+#!/usr/bin/python3
+
 import string
 
-alfabeto = string.ascii_uppercase
-mensagem = input("Digite a mensagem:  ").upper().replace(" ","")
-chave = input("Digite a chave:  ").upper().replace(" ","")
-posicao = 0
-resultado = ""
-chaveador = "x"
-
 """
-
 mod_c = Módulo da chave
 mod_a = Módulo do alfabeto
 letra_m = Letra da mensagem
 letra_c = letra da chave
-
 """
-for letra_m in mensagem:
 
-	mod_c = posicao % len(chave)
-	letra_c = chave[mod_c]
 
-	if chaveador is "0":
-
-		mod_a = (alfabeto.find(letra_m) + alfabeto.find(letra_c)) % 26
-	else:
-		mod_a = (alfabeto.find(letra_m) - alfabeto.find(letra_c)) % 26
+def cripto(frase, chave, chaveador):
 	
-	resultado += alfabeto[mod_a]
-	posicao += 1
+	alfabeto = string.ascii_uppercase
+	resultado = ""
+	posicao = 0
 
-print(resultado)
+	print(chave)
+
+	for letra_m in frase:
+
+		mod_c = posicao % len(chave)
+		letra_c = chave[mod_c]
+
+		if chaveador is "1":
+			mod_a = (alfabeto.find(letra_m) + alfabeto.find(letra_c)) % 26
+		else:
+			mod_a = (alfabeto.find(letra_m) - alfabeto.find(letra_c)) % 26
+	
+		resultado += alfabeto[mod_a]
+		posicao += 1
+
+	print(resultado)
+	input("\n\nPressione Enter para continuar")
