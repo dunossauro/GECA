@@ -74,15 +74,17 @@ while posicao < len(mensagem):
 
 	elif (letra_1_l != letra_2_l) and (letra_1_c != letra_2_c):
 		
-		letra_2_c = letra_1_c
-		letra_1_c = letra_2_c
+		letra_2_c_r = letra_1_c
+		letra_1_c_r = letra_2_c
 
-	letra_1 = matriz[letra_1_l][letra_1_c]
-	letra_2 = matriz[letra_2_l][letra_2_c]
+	letra_1 = matriz[letra_1_l][letra_1_c_r]
+	letra_2 = matriz[letra_2_l][letra_2_c_r]
 
 	texto_cifrado += letra_1+letra_2
 
 
 	posicao += 2
+
 print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
+
 print(texto_cifrado)
