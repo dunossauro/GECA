@@ -16,8 +16,6 @@ def sobre():
 		\n\
 		Explicação do código\n\
 		Esse código executa a cifra de Playfair\n\
-		É o segundo desafio proposto nas ferias de dez/14 pelo grupo de estudos criptográficos de Americana (GECA)\n\
-	Versão:\n\
 		\n\
 		0.1 (14/03/15)\n\
 		\n\
