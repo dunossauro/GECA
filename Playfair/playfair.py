@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 def cripto(frase, chave, chaveador):
 	
@@ -39,7 +39,7 @@ def cripto(frase, chave, chaveador):
 
 			texto_cifrado += matriz[letra_1_l][letra_1_c]+matriz[letra_2_l][letra_2_c]
 		
-		#Shift +1 de Colunar
+		#Shift +1 de Linhas
 		elif letra_1_c is letra_2_c:
 			if chaveador is "1":
 				letra_1_l = (letra_1_l + 1) % 5
@@ -62,7 +62,7 @@ def cripto(frase, chave, chaveador):
 		posicao += 2
 
 	#Um print da matriz completa para executar testes manuais, caso haja erro
-	#print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
+	print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
 
 	#Exibe a resposta
 	print(texto_cifrado)
@@ -86,7 +86,7 @@ def monta_matriz(chave):
 
 		#Indica a posição na matriz usando AM.
 		linha = int(posicao / 5)	#Na primeira [0] -> [1] ..... [5]
-		coluna = int(posicao % 5)	#Na primeira [0] -> [0] ..... [1]
+		coluna = int(posicao % 5)	#Na primeira [0] -> [0] ..... [5]
 
 		if letra in alfabeto:
 			#Remove as letras do alfabeto e insere a chave + alfabeto na matriz
