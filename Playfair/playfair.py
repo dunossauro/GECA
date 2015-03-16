@@ -7,7 +7,15 @@ def cripto(frase, chave, chaveador):
 	
 	posicao = 0
 	texto_cifrado = ""
-
+	
+	#Ajuste caso a frase tenha uma quantidade impar de caracteres
+	if len(frase) % 2:
+		frase += "x"
+		
+	#Validação no caso de duas letras iguais
+	if frase[posicao] is frase[posicao+1]:
+		frase[posicao+1] = "x"
+	
 	while posicao < len(frase):
 
 		#Parte onde as duas letras correm a matriz
