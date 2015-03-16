@@ -48,13 +48,13 @@ def menu():
 		entradaLimpa = entradaLimpa.replace(" ","")		
 		entradaLimpa = entradaLimpa.upper()
 		frase = list(entradaLimpa)
-		rot13.cripto(frase)
+		<arquivo>.cripto(frase)
 	elif menu is "2":
 		entradaSuja = input("Digite a frase a ser descriptografada:  \b")
 		entradaSuja = entradaSuja.replace(" ","")
 		entradaSuja = entradaSuja.upper()
 		frase = list(entradaSuja)
-		rot13.cripto(frase)
+		<arquivo>.cripto(frase)
 	elif menu is "3":
 		ajuda()
 	elif menu is "4":
