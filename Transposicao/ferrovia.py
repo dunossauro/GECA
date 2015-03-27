@@ -1,6 +1,6 @@
 mensagem = input("Digite a mensagem:  ").upper().replace(" ","")
 chaveador = int(input("1 Para criptografar, 2 para descriptografar:  "))
-linha = int(input("digite o numero de linhas: "))
+linha = 2
 saida = ""
 
 #Tratamento
