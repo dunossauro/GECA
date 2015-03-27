@@ -1,13 +1,22 @@
 mensagem = input("Digite a mensagem:  ").upper().replace(" ","")
-linhas = int(input("Digite o numero de linhas:  "))
-saida
- = ""
-x = 0
+chaveador = int(input("1 Para criptografar, 2 para descriptografar:  "))
+linha = int(input("digite o numero de linhas: "))
+saida = ""
 
-while x < linhas:
-	
-	saida += mensagem[x::linhas]
-	
-	x += 1
+#Tratamento
+while len(mensagem) % linha is not 0: mensagem += "_"
+coluna = len(mensagem)//linha
 
+if chaveador is 1:
+	n_loop = linha
+else:
+	n_loop = coluna
+
+#Cripto
+contador = 0
+while contador <  n_loop:
+	
+	saida += mensagem[contador::n_loop]
+	
+	contador += 1
 print(saida)
