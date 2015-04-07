@@ -1,195 +1,257 @@
-
 from random import shuffle
 
-chaveador = '1'
-#Definição de listas (Não precisa ser assim, mas quero ser visível)
-a = []
-b = []
-c = []
-d = []
-e = []
-f = []
-g = []
-h = []
-i = []
-j = []
-k = []
-l = []
-m = []
-n = []
-o = []
-p = []
-q = []
-r = []
-s = []
-t = []
-u = []
-v = []
-w = []
-x = []
-y = []
-z = []
+def zero():
 
-def _gen(arq):
+	mat = [
+		[],#a
+		[],#b
+		[],#c
+		[],#d
+		[],#e
+		[],#f
+		[],#g
+		[],#h
+		[],#i
+		[],#j
+		[],#k
+		[],#l
+		[],#m
+		[],#n
+		[],#n
+		[],#o
+		[],#p
+		[],#q
+		[],#r
+		[],#s
+		[],#t
+		[],#u
+		[],#v
+		[],#x
+		[],#w
+		[],#y
+		[],#z
+		]
+	return(mat)
 
+def gen(arq):
 	arquivo = open(arq,'r')
 
 	for x in arquivo:
 		yield x.strip()
 
-def _map(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z):
-	
-	#Fase das atribuições dos valores
+def map(zero):
 	cont = 0
-	for _x in _gen('Mascara_Beale.txt'):
-		for y in _x:
-			if y == 'a':
-				a.append(cont)
-			if y == 'b':
-				b.append(cont)
-			if y == 'c':
-				c.append(cont)
-			if y == 'd':
-				d.append(cont)
-			if y == 'e':
-				e.append(cont)		
-			if y == 'f':
-				f.append(cont)
-			if y == 'g':
-				g.append(cont)
-			if y == 'h':
-				h.append(cont)
-			if y == 'i':
-				i.append(cont)
-			if y == 'j':
-				j.append(cont)
-			if y == 'k':
-				k.append(cont)
-			if y == 'l':
-				l.append(cont)
-			if y == 'm':
-				m.append(cont)
-			if y == 'n':
-				n.append(cont)
-			if y == 'o':
-				o.append(cont)
-			if y == 'p':
-				p.append(cont)
-			if y == 'q':
-				q.append(cont)
-			if y == 'r':
-				r.append(cont)
-			if y == 's':
-				s.append(cont)
-			if y == 't':
-				t.append(cont)
-			if y == 'u':
-				u.append(cont)
-			if y == 'v':
-				v.append(cont)
-			if y == 'x':
-				x.append(cont)
-			if y == 'w':
-				w.append(cont)
-			if y == 'y':
-				y.append(cont)
-			if y == 'z':
-				z.append(cont)
+	for _x in gen('Mascara_Beale.txt'):
+		for _y in _x:
+			if _y is 'a':
+				zero[0].append(cont)
+			if _y is 'b':
+				zero[1].append(cont)
+			if _y is 'c':
+				zero[2].append(cont)
+			if _y is 'd':
+				zero[3].append(cont)
+			if _y is 'e':
+				zero[4].append(cont)
+			if _y is 'f':
+				zero[5].append(cont)
+			if _y is 'g':
+				zero[6].append(cont)
+			if _y is 'h':
+				zero[7].append(cont)
+			if _y is 'i':
+				zero[8].append(cont)
+			if _y is 'j':
+				zero[9].append(cont)
+			if _y is 'k':
+				zero[10].append(cont)
+			if _y is 'l':
+				zero[11].append(cont)
+			if _y is 'm':
+				zero[12].append(cont)
+			if _y is 'n':
+				zero[13].append(cont)
+			if _y is 'n':
+				zero[14].append(cont)
+			if _y is 'o':
+				zero[15].append(cont)
+			if _y is 'p':
+				zero[16].append(cont)
+			if _y is 'q':
+				zero[17].append(cont)
+			if _y is 'r':
+				zero[18].append(cont)
+			if _y is 's':
+				zero[19].append(cont)
+			if _y is 't':
+				zero[20].append(cont)
+			if _y is 'u':
+				zero[21].append(cont)
+			if _y is 'v':
+				zero[22].append(cont)
+			if _y is 'x':
+				zero[23].append(cont)
+			if _y is 'w':
+				zero[24].append(cont)
+			if _y is 'y':
+				zero[25].append(cont)
+			if _y is 'z':
+				zero[26].append(cont)
 			cont += 1
+	return(zero)
 
-def _cripto(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z):
+def cripto(_map):
 	saida = []
-	for _x in _gen('texto.txt'):
+	for _x in gen('texto.txt'):
 		for y in _x:
 			if y == 'a':
-				shuffle(a)
-				saida.append(a[0])
+				shuffle(map[0])
+				saida.append(map[0][0])
 			if y == 'b':
-				shuffle(b)
-				saida.append(b[0])
+				shuffle(map[1])
+				saida.append(map[1][0])
 			if y == 'c':
-				shuffle(c)
-				saida.append(c[0])
+				shuffle(map[2])
+				saida.append(map[2][0])
 			if y == 'd':
-				shuffle(d)
-				saida.append(d[0])
+				shuffle(map[3])
+				saida.append(map[3][0])
 			if y == 'e':
-				shuffle(e)
-				saida.append(e[0])
+				shuffle(map[4])
+				saida.append(map[4][0])
 			if y == 'f':
-				shuffle(f)
-				saida.append(f[0])
+				shuffle(map[5])
+				saida.append(map[5][0])
 			if y == 'g':
-				shuffle(g)
-				saida.append(g[0])
+				shuffle(map[6])
+				saida.append(map[6][0])
 			if y == 'h':
-				shuffle(h)
-				saida.append(h[0])
+				shuffle(map[7])
+				saida.append(map[7][0])
 			if y == 'i':
-				shuffle(i)
-				saida.append(i[0])
+				shuffle(map[8])
+				saida.append(map[8][0])
 			if y == 'j':
-				shuffle(j)
-				saida.append(j[0])
+				shuffle(map[9])
+				saida.append(map[9][0])
 			if y == 'k':
-				shuffle(k)
-				saida.append(k[0])
+				shuffle(map[10])
+				saida.append(map[10][0])
 			if y == 'l':
-				shuffle(l)
-				saida.append(l[0])
+				shuffle(map[11])
+				saida.append(map[11][0])
 			if y == 'm':
-				shuffle(m)
-				saida.append(m[0])
+				shuffle(map[12])
+				saida.append(map[12][0])
 			if y == 'n':
-				shuffle(n)
-				saida.append(n[0])
+				shuffle(map[13])
+				saida.append(map[13][0])
 			if y == 'o':
-				shuffle(o)
-				saida.append(o[0])
+				shuffle(map[14])
+				saida.append(map[14][0])
 			if y == 'p':
-				shuffle(p)
-				saida.append(p[0])
+				shuffle(map[15])
+				saida.append(map[15][0])
 			if y == 'q':
-				shuffle(q)
-				saida.append(q[0])
+				shuffle(map[16])
+				saida.append(map[16][0])
 			if y == 'r':
-				shuffle(r)
-				saida.append(r[0])
+				shuffle(map[17])
+				saida.append(map[17][0])
 			if y == 's':
-				shuffle(s)
-				saida.append(s[0])
+				shuffle(map[18])
+				saida.append(map[18][0])
 			if y == 't':
-				shuffle(t)
-				saida.append(t[0])
+				shuffle(map[19])
+				saida.append(map[19][0])
 			if y == 'u':
-				shuffle(u)
-				saida.append(u[0])
+				shuffle(map[20])
+				saida.append(map[20][0])
 			if y == 'v':
-				shuffle(v)
-				saida.append(v[0])
+				shuffle(map[21])
+				saida.append(map[21][0])
 			if y == 'w':
-				shuffle(w)
-				saida.append(w[0])
+				shuffle(map[22])
+				saida.append(map[22][0])
 			if y == 'x':
-				shuffle(x)
-				saida.append(x[0])
+				shuffle(map[23])
+				saida.append(map[23][0])
 			if y == 'y':
-				shuffle(y)
-				saida.append(y[0])
+				shuffle(map[24])
+				saida.append(map[24][0])
 			if y == 'z':
-				shuffle(z)
-				saida.append(z[0])
+				shuffle(map[25])
+				saida.append(map[25][0])
+	return(saida)
+	print(saida)
+
+def decripto(map):
+	saida = []
+	for _x in gen('saida.txt'):
+			print(_x)
+			if _x in map[0]:
+				saida.append('a')
+			if _x in map[1]:
+				saida.append('b')
+			if _x in map[2]:
+				saida.append('c')
+			if _x in map[3]:
+				saida.append('d')
+			if _x in map[4]:
+				saida.append('e')
+			if _x in map[5]:
+				saida.append('f')
+			if _x in map[6]:
+				saida.append('g')
+			if _x in map[7]:
+				saida.append('h')
+			if _x in map[8]:
+				saida.append('i')
+			if _x in map[9]:
+				saida.append('j')
+			if _x in map[10]:
+				saida.append('k')
+			if _x in map[11]:
+				saida.append('l')
+			if _x in map[12]:
+				saida.append('m')
+			if _x in map[13]:
+				saida.append('n')
+			if _x in map[14]:
+				saida.append('o')
+			if _x in map[15]:
+				saida.append('p')
+			if _x in map[16]:
+				saida.append('q')
+			if _x in map[17]:
+				saida.append('r')
+			if _x in map[18]:
+				saida.append('s')
+			if _x in map[19]:
+				saida.append('t')
+			if _x in map[20]:
+				saida.append('u')
+			if _x in map[21]:
+				saida.append('v')
+			if _x in map[22]:
+				saida.append('w')
+			if _x in map[23]:
+				saida.append('x')
+			if _x in map[24]:
+				saida.append('y')
+			if _x in map[25]:
+				saida.append('z')
+	return(saida)
+
+def main ():
 	
-	f = open('saida.txt','w')
-	f.write(str(saida))
+	chaveador = '1'
+	
+	_zero = zero()
+	_map = map(_zero)
+	if chaveador is '1':
+		_cripto = cripto(_map)
+	else:
+		_decripto = decripto(_map)
 
-def _decripto(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z): pass 
-
-#chamadas
-_map(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
-
-#cripto ou decripto?
-if chaveador is '1':
-	saida = _cripto(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
-else:
-	saida = _decripto(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
+main()
