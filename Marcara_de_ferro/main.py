@@ -1,35 +1,17 @@
 from random import shuffle
+"""
+Falta implementar dicionários
+"""
 
 def zero():
 
 	mat = [
-		[],#a
-		[],#b
-		[],#c
-		[],#d
-		[],#e
-		[],#f
-		[],#g
-		[],#h
-		[],#i
-		[],#j
-		[],#k
-		[],#l
-		[],#m
-		[],#n
-		[],#n
-		[],#o
-		[],#p
-		[],#q
-		[],#r
-		[],#s
-		[],#t
-		[],#u
-		[],#v
-		[],#x
-		[],#w
-		[],#y
-		[],#z
+		[],[],[],[],[],#A,B,C,D,E
+		[],[],[],[],[],#F,G,H,I,J
+		[],[],[],[],[],#K,L,M,N,O
+		[],[],[],[],[],#P,Q,R,S,T
+		[],[],[],[],[],#U,V,X,W,Y
+		[]#Z
 		]
 	return(mat)
 
