@@ -8,9 +8,5 @@ for line in sys.stdin:
     for word in words:
         word = word.lower()
         
-        for x in range(len(word)):
-	        try:
-        		if word[x].isalpha() and word[x+1].isalpha():
-	        		print (("%s%s\t\t%s") % (word[x],word[x+1], 1))
-	        except:
-	        	pass
+        for x in word:
+        	print (("%s\t\t%s") % (x, 1))
