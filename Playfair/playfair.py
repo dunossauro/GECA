@@ -13,7 +13,7 @@ def cripto(frase, chave, chaveador):
 	if len(frase) % 2:
 		frase += "x"
 
-	#Validação no caso de duas letras igua==
+	#Validação no caso de duas letras iguais
 	if frase[posicao] == frase[posicao+1]:
 		frase[posicao+1] = "x"
 
@@ -70,7 +70,7 @@ def cripto(frase, chave, chaveador):
 
 		posicao += 2
 
-	#Um print da matriz completa para executar testes manua==, caso haja erro
+	#Um print da matriz completa para executar testes manuais, caso haja erro
 	#print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
 
 	#Exibe a resposta
@@ -80,7 +80,7 @@ def cripto(frase, chave, chaveador):
 
 def monta_matriz(chave):
 
-	alfabeto = l==t("abcdefghiklmnopqrstuvwxyz")
+	alfabeto = list("abcdefghiklmnopqrstuvwxyz")
 
 	matriz = [[0,0,0,0,0] for x in range(5)]
 
