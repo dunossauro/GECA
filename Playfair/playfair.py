@@ -13,8 +13,8 @@ def cripto(frase, chave, chaveador):
 	if len(frase) % 2:
 		frase += "x"
 
-	#Validação no caso de duas letras iguais
-	if frase[posicao] is frase[posicao+1]:
+	#Validação no caso de duas letras igua==
+	if frase[posicao] == frase[posicao+1]:
 		frase[posicao+1] = "x"
 
 	while posicao < len(frase):
@@ -23,7 +23,7 @@ def cripto(frase, chave, chaveador):
 		posicao_m = 0
 		for linha in matriz:
 			for coluna in linha:
-				if coluna is frase[posicao]:
+				if coluna == frase[posicao]:
 					letra_1_l = posicao_m // 5
 					letra_1_c = posicao_m % 5
 				posicao_m += 1
@@ -31,15 +31,15 @@ def cripto(frase, chave, chaveador):
 		posicao_m = 0
 		for linha in matriz:
 			for coluna in linha:
-				if coluna is frase[posicao+1]:
+				if coluna == frase[posicao+1]:
 					letra_2_l = posicao_m // 5
 					letra_2_c = posicao_m % 5
 				posicao_m += 1
 
 		#Shift +1 de Colunas
-		if letra_1_l is letra_2_l:
+		if letra_1_l == letra_2_l:
 
-			if chaveador is "1":
+			if chaveador == "1":
 				letra_1_c = (letra_1_c + 1) % 5
 				letra_2_c = (letra_2_c + 1) % 5
 			else:
@@ -49,8 +49,8 @@ def cripto(frase, chave, chaveador):
 			texto_cifrado += matriz[letra_1_l][letra_1_c]+matriz[letra_2_l][letra_2_c]
 
 		#Shift +1 de Linhas
-		elif letra_1_c is letra_2_c:
-			if chaveador is "1":
+		elif letra_1_c == letra_2_c:
+			if chaveador == "1":
 				letra_1_l = (letra_1_l + 1) % 5
 				letra_2_l = (letra_2_l + 1) % 5
 			else:
@@ -70,7 +70,7 @@ def cripto(frase, chave, chaveador):
 
 		posicao += 2
 
-	#Um print da matriz completa para executar testes manuais, caso haja erro
+	#Um print da matriz completa para executar testes manua==, caso haja erro
 	#print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
 
 	#Exibe a resposta
@@ -80,7 +80,7 @@ def cripto(frase, chave, chaveador):
 
 def monta_matriz(chave):
 
-	alfabeto = list("abcdefghiklmnopqrstuvwxyz")
+	alfabeto = l==t("abcdefghiklmnopqrstuvwxyz")
 
 	matriz = [[0,0,0,0,0] for x in range(5)]
 
