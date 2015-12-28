@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
+# V: 0.0.2
 
 def cripto(frase, chave, chaveador):
-	
+
 	#Importa a matriz montada
 	matriz = monta_matriz(chave)
-	
+
 	posicao = 0
 	texto_cifrado = ""
-	
+
 	#Ajuste caso a frase tenha uma quantidade impar de caracteres
 	if len(frase) % 2:
 		frase += "x"
-		
+
 	#Validação no caso de duas letras iguais
 	if frase[posicao] is frase[posicao+1]:
 		frase[posicao+1] = "x"
-	
+
 	while posicao < len(frase):
 
 		#Parte onde as duas letras correm a matriz
@@ -37,16 +38,16 @@ def cripto(frase, chave, chaveador):
 
 		#Shift +1 de Colunas
 		if letra_1_l is letra_2_l:
-			
+
 			if chaveador is "1":
-				letra_1_c = (letra_1_c + 1) % 5 
+				letra_1_c = (letra_1_c + 1) % 5
 				letra_2_c = (letra_2_c + 1) % 5
 			else:
-				letra_1_c = (letra_1_c - 1) % 5 
+				letra_1_c = (letra_1_c - 1) % 5
 				letra_2_c = (letra_2_c - 1) % 5
 
 			texto_cifrado += matriz[letra_1_l][letra_1_c]+matriz[letra_2_l][letra_2_c]
-		
+
 		#Shift +1 de Linhas
 		elif letra_1_c is letra_2_c:
 			if chaveador is "1":
@@ -60,7 +61,7 @@ def cripto(frase, chave, chaveador):
 
 		#Shift N(C)
 		elif (letra_1_l != letra_2_l) and (letra_1_c != letra_2_c):
-			
+
 			letra_2_c_r = letra_1_c
 			letra_1_c_r = letra_2_c
 
@@ -70,7 +71,7 @@ def cripto(frase, chave, chaveador):
 		posicao += 2
 
 	#Um print da matriz completa para executar testes manuais, caso haja erro
-	print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
+	#print("",matriz[0],"\n",matriz[1],"\n",matriz[2],"\n",matriz[3],"\n",matriz[4])
 
 	#Exibe a resposta
 	print(texto_cifrado)
@@ -78,13 +79,10 @@ def cripto(frase, chave, chaveador):
 	input("Precione enter para continuar...")
 
 def monta_matriz(chave):
+
 	alfabeto = list("abcdefghiklmnopqrstuvwxyz")
 
-	matriz = [[0,0,0,0,0],
-			  [0,0,0,0,0],
-			  [0,0,0,0,0],
-			  [0,0,0,0,0],
-			  [0,0,0,0,0]]
+	matriz = [[0,0,0,0,0] for x in range(5)]
 
 	linha = 0
 	coluna = 0
@@ -104,11 +102,11 @@ def monta_matriz(chave):
 
 	#Insersão dos caracteres restantes no alfabeto
 	while (len(alfabeto) > 0):
-		
+
 		linha = int(posicao / 5)
 		coluna = int(posicao % 5)
 		matriz[linha][coluna] = alfabeto.pop(0)
-		
+
 		posicao += 1
 
 	return(matriz)
