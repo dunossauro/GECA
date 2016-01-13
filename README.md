@@ -1,5 +1,8 @@
 #Grupo de estudos criptográficos de Americana
-> Sujestão para estudos de 2016:
+> Sugestão para estudos de 2016:
+
+>       Horário:        13:00 ~ 15:30
+>       Laboratório:    B6
 
 ## Criptografia Clássica
 
