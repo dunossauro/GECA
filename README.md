@@ -1,9 +1,5 @@
 #Grupo de estudos criptográficos de Americana
-
-
->Todo código, ou algo que o valha, é livre para ser usado por todos para todo e qualquer fim.
-
-#####Sujestão para estudos de 2016:
+> Sujestão para estudos de 2016:
 
 ## Criptografia Clássica
 
