@@ -23,7 +23,7 @@ def cripto(frase, chave, chaveador):
 		mod_c = posicao % len(chave)
 		letra_c = chave[mod_c]
 
-		if chaveador is "1":
+		if chaveador == "1":
 			mod_a = (alfabeto.find(letra_m) + alfabeto.find(letra_c)) % 26
 		else:
 			mod_a = (alfabeto.find(letra_m) - alfabeto.find(letra_c)) % 26
