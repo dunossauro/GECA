@@ -9,7 +9,7 @@ def cripto(frase, chave):
 
 	for letra in frase:
 	
-		if chave is "1":
+		if chave == "1":
 			busca = alfabeto.find(letra)+3
 	
 		else:
